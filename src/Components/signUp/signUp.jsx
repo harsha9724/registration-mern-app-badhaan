@@ -14,7 +14,7 @@ const SignUp = () => {
 });
 function postSignUpData(data){
   try{
-    axios.post("https://registration-server-assignment-badhaan.onrender.com/api/user/register",data).then((res)=>{
+    axios.post("http://localhost:5000/api/user/register",data).then((res)=>{
       // console.log(res);
       window.alert(res.data.message);
       navigate("/")

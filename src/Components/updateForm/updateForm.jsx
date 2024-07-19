@@ -23,7 +23,7 @@ const Profile = () => {
 
   useEffect( () => {
   axios
-      .get("https://registration-server-assignment-badhaan.onrender.com/api/user", config)
+      .get("http://localhost:5000/api/user", config)
       .then((res) => {
         console.log(res.data.data);
         setProfile(res.data.data);
@@ -41,7 +41,7 @@ useEffect( ()=>{
 if(Object.keys(formError).length==0 && updateClick ){
     console.log(updateDetails);
    axios
-    .post("https://registration-server-assignment-badhaan.onrender.com/api/user/update",updateDetails,config)
+    .post("http://localhost:5000/api/user/update",updateDetails,config)
     .then((res) => {
      console.log(res);
      window.alert(res.data.message);

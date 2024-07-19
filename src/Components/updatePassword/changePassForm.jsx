@@ -15,7 +15,7 @@ const ForgetPasswordForm=()=>{
     const [click,setClick]=useState(false);
     function postdata(data){
         try{
-            axios.post("https://registration-server-assignment-badhaan.onrender.com/api/user/updatePassword",data).then((res)=>{
+            axios.post("http://localhost:5000/api/user/updatePassword",data).then((res)=>{
               console.log(res);
               window.alert(res.data.message)
               navigate("/")
